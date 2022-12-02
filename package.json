@@ -1,0 +1,50 @@
+{
+  "name": "vite-plugin-on-success",
+  "version": "0.0.1",
+  "description": "Vite plugin to run process build success.",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": "./dist/*"
+  },
+  "types": "./src/index.ts",
+  "scripts": {
+    "dev": "npm run build -- --watch",
+    "build": "vite build",
+    "test": "vitest",
+    "test:watch": "npm run test -- --watch",
+    "lint": "eslint .",
+    "release": "bumpp --commit --push --tag && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirilovic/vite-plugin-on-success.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amirilovic/vite-plugin-on-success/issues"
+  },
+  "homepage": "https://github.com/amirilovic/vite-plugin-on-success#readme",
+  "dependencies": {
+    "debug": "^4.3.4",
+    "execa": "^6.1.0",
+    "tree-kill": "^1.2.2"
+  },
+  "peerDependencies": {
+    "vite": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.7",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "vite": "^3.2.4",
+    "vite-plugin-checker": "^0.5.1",
+    "vitest": "^0.25.3"
+  }
+}
